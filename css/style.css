@@ -1,0 +1,67 @@
+/* common */
+.container{max-width: 1600px; margin: 0 auto;}
+.clearfix::after{content:""; display: table; clear: both;}
+
+@media all and (max-width: 1640px) {
+    .container{padding: 0 20px;}
+}
+/* content */
+.profile-wrap{position: fixed; left: 0; top: 0; width: 300px; height: 100vh; background-color: #F5F5F5; padding: 20px 0;}
+.profile-image{width: 200px; height: 200px; border-radius: 50%; background: url(../images/photo.jpg) no-repeat top -50px center / cover; margin: 0 auto;}
+.profile-list{text-align: center; padding-top: 70px; position: relative;}
+.profile-list::before{content:""; display: block; position: absolute; left: 50%; top: 10px; width: 1px; height: 50px; background-color: black;}
+.profile-list h1{font-family: "Dream Medium"; font-size: 25px; margin: 10px 0;}
+.profile-list span{display: block; font-family: "Noto Regular"; font-size: 16px;}
+.profile-content{width: calc(100% - 300px); margin-left: 300px; padding: 20px;}
+.profile-box{padding: 20px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 50px;}
+.profile-title{font-family: "Dream Medium"; font-size: 30px; margin-bottom: 30px;}
+.profile-in-text p{font-size: 16px; line-height: 25px;}
+.link-box{display: inline-block; margin-top: 20px; font-family: "Noto Medium"; font-size: 16px; color: #3F2305; border: 1px solid #3F2305; padding: 10px 60px 10px 10px; background: url(../images/link_arrow.png) no-repeat right 10px center; transition: all .5s;}
+.link-box:hover{background: #3F2305 url(../images/link_arrow_white.png) no-repeat right 10px center; color: white;}
+
+.profile-in-content > ul{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+.profile-in-content > ul > li{width: 49%; border-radius: 10px; overflow: hidden; position: relative; margin-bottom: 20px;}
+.profile-in-content > ul > li a{width: 100%; height: 100%; display: block;}
+.portfolio-image{width: 100%; height: 300px; background-repeat: no-repeat; background-size: cover;}
+.portfolio-image.image_1{background-image: url(../images/portfolio_1.png)}
+.portfolio-image.image_2{background-image: url(../images/portfolio_2.png)}
+.portfolio-image.image_3{background-image: url(../images/portfolio_3.png)}
+.portfolio-image.image_4{background-image: url(../images/portfolio_4.png)}
+.portfolio-content{visibility: hidden; opacity: 0; width: 100%; height: 100%; position: absolute; background-color: rgba(0,0,0,.6); left: 0; top: 100%; text-align: center; padding: 20px; transition: all .5s;}
+.profile-in-content > ul > li a:hover .portfolio-content{visibility: visible; opacity: 1; top: 0;}
+.portfolio-content h1{font-family: "Noto Medium"; font-size: 20px; color: white;}
+.portfolio-content p{font-family: "Noto Regular"; font-size: 16px; margin: 30px 0; color: white; text-align: left;}
+.portfolio-content li{text-align: left; padding-left: 10px; position: relative; color: white; margin-bottom: 5px;}
+.portfolio-content li:last-child{margin-bottom: 0;}
+.portfolio-content li::before{content:""; display: block; position: absolute; left: 0; top: 7px; width: 3px; height: 3px; border-radius: 50%; background-color: white;}
+
+.career-box{padding-left: 20px; position: relative; padding-bottom: 50px;}
+.career-box:last-child{padding-bottom: 0;}
+.career-box::before{content:""; display: block; position: absolute; left: 0; top: 5px; width: 1px; height: 100%; background-color: #3f2305;}
+.career-box h2{font-family: "Noto Medium"; font-size: 20px; position: relative;}
+.career-box h2::before{content:""; display: block; position: absolute; left: -24px; top: 3px; width: 10px; height: 10px; border-radius: 50%; background-color: #3f2305;}
+.career-list{margin-top: 20px;}
+.career-list li{font-family: "Noto Regular"; font-size: 16px; line-height: 25px; padding-left: 30px; background: url(../images/carrer_arrow.png) no-repeat left top 4px;}
+
+.profile-skill-in ul{display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
+.profile-skill-in li{width: 25%; text-align: center;}
+.profile-skill-in li p{font-family: "Noto Medium"; font-size: 20px; margin-top: 20px; color: #111;}
+
+@media all and (max-width: 900px) {
+    .profile-wrap{width: 200px;}
+    .profile-content{width: calc(100% - 200px); margin-left: 200px;}
+    .profile-image{width: 150px; height: 150px;}
+}
+
+@media all and (max-width: 768px) {
+    .profile-wrap{width: 100%; height: auto; left: 0; top: 0; display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; align-items: center; z-index: 10;} 
+    .profile-image{margin: 0;}
+    .profile-list{padding-top: 0;}
+    .profile-list::before{display: none;}
+    .profile-content{width: 100%; margin-left: 0; margin-top: 190px;}
+}
+
+@media all and (max-width: 500px) {
+    .profile-in-content > ul > li{width: 100%;}
+    .profile-skill-in li{width: 50%; margin-bottom: 10px;}
+}
